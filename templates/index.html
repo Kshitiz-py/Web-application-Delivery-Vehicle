@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Package Delivery System</title>
+</head>
+<body>
+    <header>
+        <h1>Package Delivery Decision Support</h1>
+    </header>
+
+    <main>
+        <section id="file-upload">
+            <h2>Upload a File</h2>
+            <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" accept=".csv, .json">
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+
+        <section id="route-visualization">
+            <h2>Route Visualization</h2>
+            <!-- This is where the map will be displayed -->
+        </section>
+
+        <section id="simulation-results">
+            <h2>Simulation Results</h2>
+            <!-- This is where simulation results will be displayed -->
+            <button id="download-results">Download Results</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 EAASY Project</p>
+    </footer>
+</body>
+</html>
